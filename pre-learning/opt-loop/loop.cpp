@@ -3,8 +3,8 @@
 #include <math.h>
 using namespace std;
 
-#define MODE1 0
-#define DEBUG 0
+#define MODE1 1
+#define DEBUG 0 
 
 const int N = 100000000;
 double *a = nullptr;
