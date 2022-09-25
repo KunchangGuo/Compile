@@ -1,0 +1,94 @@
+
+;; Function main (main, funcdef_no=1731, decl_uid=44210, cgraph_uid=465, symbol_order=495)
+
+int main ()
+{
+  struct basic_ostream & D.49123;
+  struct basic_ostream & D.49122;
+  struct basic_ostream & D.49121;
+  struct basic_ostream & D.49120;
+  int n;
+  int t;
+  int i;
+  int b;
+  int a;
+  int D.49118;
+  struct basic_ostream & _1;
+  struct basic_ostream & _2;
+  struct basic_ostream & _3;
+  struct basic_ostream & _4;
+  int n.0_5;
+  struct basic_ostream & _17;
+  struct basic_ostream & _20;
+  struct basic_ostream & _23;
+  int _26;
+  struct basic_ostream & _30;
+
+  <bb 2> :
+  a_11 = 0;
+  b_12 = 1;
+  i_13 = 1;
+  std::basic_istream<char>::operator>> (&cin, &n);
+
+  <bb 3> :
+  _17 = std::basic_ostream<char>::operator<< (&cout, 10);
+
+  <bb 4> :
+  _1 = _17;
+  std::basic_ostream<char>::operator<< (_1, endl);
+
+  <bb 5> :
+  _20 = std::basic_ostream<char>::operator<< (&cout, a_11);
+
+  <bb 6> :
+  _2 = _20;
+  std::basic_ostream<char>::operator<< (_2, endl);
+
+  <bb 7> :
+  _23 = std::basic_ostream<char>::operator<< (&cout, b_12);
+
+  <bb 8> :
+  _3 = _23;
+  std::basic_ostream<char>::operator<< (_3, endl);
+
+  <bb 9> :
+  goto <bb 13>; [INV]
+
+  <bb 10> :
+  t_27 = b_7;
+  b_28 = a_6 + b_7;
+  _30 = std::basic_ostream<char>::operator<< (&cout, b_28);
+
+  <bb 11> :
+  _4 = _30;
+  std::basic_ostream<char>::operator<< (_4, endl);
+
+  <bb 12> :
+  a_32 = t_27;
+  i_33 = i_8 + 1;
+
+  <bb 13> :
+  # a_6 = PHI <a_11(9), a_32(12)>
+  # b_7 = PHI <b_12(9), b_28(12)>
+  # i_8 = PHI <i_13(9), i_33(12)>
+  n.0_5 = n;
+  if (i_8 < n.0_5)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  n ={v} {CLOBBER};
+  _26 = 0;
+
+  <bb 15> :
+<L3>:
+  return _26;
+
+  <bb 16> :
+<L4>:
+  resx 1
+
+}
+
+
