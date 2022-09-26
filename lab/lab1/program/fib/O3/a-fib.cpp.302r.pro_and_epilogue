@@ -1,0 +1,1062 @@
+
+;; Function std::ctype<char>::do_widen (_ZNKSt5ctypeIcE8do_widenEc, funcdef_no=1565, decl_uid=38061, cgraph_uid=536, symbol_order=565)
+
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Stack clash no probe no stack adjustment in prologue.
+Stack clash no residual allocation in prologue.
+Stack clash no frame pointer needed.
+Stack clash not noreturn prologue.
+scanning new insn with uid = 19.
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+std::ctype<char>::do_widen
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 7 [sp] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 4 [si]
+;;  ref usage 	r0={2d,2u} r1={1d} r2={1d} r4={1d,1u} r5={1d} r7={1d,2u} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r36={1d} r37={1d} 
+;;    total ref usage 22{17d,5u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 17 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 17 6 3 2 NOTE_INSN_PROLOGUE_END)
+(note 3 17 4 2 NOTE_INSN_DELETED)
+(insn 4 3 5 2 (set (reg/v:QI 0 ax [orig:84 __c ] [84])
+        (reg:QI 4 si [87])) "/usr/include/c++/11/bits/locale_facets.h":1087:7 77 {*movqi_internal}
+     (nil))
+(note 5 4 13 2 NOTE_INSN_FUNCTION_BEG)
+(insn 13 5 18 2 (use (reg/i:QI 0 ax)) "/usr/include/c++/11/bits/locale_facets.h":1088:21 -1
+     (nil))
+(note 18 13 19 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 19 18 20 2 (simple_return) "/usr/include/c++/11/bits/locale_facets.h":1088:21 -1
+     (nil)
+ -> simple_return)
+(barrier 20 19 16)
+(note 16 20 0 NOTE_INSN_DELETED)
+
+;; Function std::endl.isra (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0, funcdef_no=2306, decl_uid=50074, cgraph_uid=1057, symbol_order=1235)
+
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Stack clash no probe small stack adjustment in prologue.
+Stack clash residual allocation in prologue.
+Stack clash no frame pointer needed.
+Stack clash not noreturn prologue.
+verify found no changes in insn with uid = 2.
+insn 7: replaced reg 6 with 5
+rescanning insn with uid = 7.
+verify found no changes in insn with uid = 7.
+insn 9: replaced reg 6 with 5
+rescanning insn with uid = 9.
+verify found no changes in insn with uid = 9.
+scanning new insn with uid = 71.
+deleting insn with uid = 2.
+Attempting shrink-wrapping optimization.
+Block 2 needs prologue due to insn 9:
+(insn 9 8 10 2 (set (reg/f:DI 40 r12 [orig:88 _14 ] [88])
+        (mem/f:DI (plus:DI (plus:DI (reg/f:DI 5 di [orig:95 __os ] [95])
+                    (reg:DI 0 ax [orig:97 MEM[(long int *)_2 + -24B] ] [97]))
+                (const_int 240 [0xf0])) [19 MEM[(const struct __ctype_type * *)_5 + 240B]+0 S8 A64])) 74 {*movdi_internal}
+     (nil))
+Block 3 needs prologue due to insn 13:
+(call_insn 13 12 14 3 (call (mem:QI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>) [0 __throw_bad_cast S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/basic_ios.h":50:18 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (nil))
+Block 4 needs prologue due to insn 71:
+(insn 71 16 17 4 (set (reg/v/f:DI 6 bp [orig:95 __os ] [95])
+        (reg:DI 5 di [100])) -1
+     (nil))
+Block 6 needs prologue due to insn 26:
+(call_insn 26 25 27 6 (call (mem:QI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>) [0 _M_widen_init S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/locale_facets.h":879:21 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+Block 7 needs prologue due to insn 35:
+(call_insn 35 34 36 7 (set (reg:QI 0 ax)
+        (call (mem:QI (reg/f:DI 0 ax [orig:92 _25 ] [92]) [0 *OBJ_TYPE_REF(_25;_14->6) S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/locale_facets.h":880:23 824 {*call_value}
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+Block 8 needs prologue due to insn 42:
+(call_insn 42 41 43 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>) [0 put S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":685:19 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+After wrapping required blocks, PRO is now 2
+Avoiding non-duplicatable blocks, PRO is now 2
+Bumping back to anticipatable blocks, PRO is now 2
+scanning new insn with uid = 62.
+scanning new insn with uid = 63.
+scanning new insn with uid = 64.
+scanning new insn with uid = 74.
+scanning new insn with uid = 75.
+scanning new insn with uid = 76.
+verify found no changes in insn with uid = 13.
+verify found no changes in insn with uid = 26.
+verify found no changes in insn with uid = 35.
+verify found no changes in insn with uid = 42.
+verify found no changes in insn with uid = 45.
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+std::endl.isra
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9] 40 [r12]
+;;  exit block uses 	 6 [bp] 7 [sp] 40 [r12]
+;;  regs ever live 	 0 [ax] 1 [dx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags] 40 [r12]
+;;  ref usage 	r0={10d,7u,1e} r1={7d,1u} r2={6d} r4={9d,2u} r5={10d,7u} r6={3d,3u,1e} r7={7d,21u} r8={5d} r9={5d} r10={5d} r11={5d} r12={5d} r13={5d} r14={5d} r15={5d} r17={10d,3u} r18={5d} r20={6d} r21={6d} r22={6d} r23={6d} r24={6d} r25={6d} r26={6d} r27={6d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={6d} r37={6d} r38={5d} r39={5d} r40={3d,8u,1e} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} 
+;;    total ref usage 435{380d,52u,3e} in 32{27 regular + 5 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 62 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 62 5 63 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 40 r12)) "/usr/include/c++/11/ostream":684:5 -1
+     (nil))
+(insn/f 63 62 64 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 6 bp)) "/usr/include/c++/11/ostream":684:5 -1
+     (nil))
+(insn/f 64 63 65 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/usr/include/c++/11/ostream":684:5 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int -8 [0xfffffffffffffff8])))
+        (nil)))
+(note 65 64 3 2 NOTE_INSN_PROLOGUE_END)
+(note 3 65 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 3 8 2 (set (reg/f:DI 0 ax [orig:96 __os_1(D)->_vptr.basic_ostream ] [96])
+        (mem/f:DI (reg/f:DI 5 di [orig:95 __os ] [95]) [2 __os_1(D)->_vptr.basic_ostream+0 S8 A64])) "/usr/include/c++/11/ostream":685:39 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/v/f:DI 6 bp [orig:95 __os ] [95]) [2 __os_1(D)->_vptr.basic_ostream+0 S8 A64])
+        (nil)))
+(insn 8 7 9 2 (set (reg:DI 0 ax [orig:97 MEM[(long int *)_2 + -24B] ] [97])
+        (mem:DI (plus:DI (reg/f:DI 0 ax [orig:96 __os_1(D)->_vptr.basic_ostream ] [96])
+                (const_int -24 [0xffffffffffffffe8])) [7 MEM[(long int *)_2 + -24B]+0 S8 A64])) 74 {*movdi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 40 r12 [orig:88 _14 ] [88])
+        (mem/f:DI (plus:DI (plus:DI (reg/f:DI 5 di [orig:95 __os ] [95])
+                    (reg:DI 0 ax [orig:97 MEM[(long int *)_2 + -24B] ] [97]))
+                (const_int 240 [0xf0])) [19 MEM[(const struct __ctype_type * *)_5 + 240B]+0 S8 A64])) 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 40 r12 [orig:88 _14 ] [88])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/basic_ios.h":49:7 8 {*cmpdi_ccno_1}
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "/usr/include/c++/11/bits/basic_ios.h":49:7 806 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 15)
+(note 12 11 13 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(call_insn 13 12 14 3 (call (mem:QI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>) [0 __throw_bad_cast S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/basic_ios.h":50:18 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 14 13 15)
+(code_label 15 14 16 4 4 (nil) [1 uses])
+(note 16 15 71 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 71 16 17 4 (set (reg/v/f:DI 6 bp [orig:95 __os ] [95])
+        (reg:DI 5 di [100])) -1
+     (nil))
+(insn 17 71 18 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:QI (plus:DI (reg/f:DI 40 r12 [orig:88 _14 ] [88])
+                    (const_int 56 [0x38])) [0 MEM[(const struct ctype *)_14]._M_widen_ok+0 S1 A64])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/locale_facets.h":877:2 5 {*cmpqi_ccno_1}
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "/usr/include/c++/11/bits/locale_facets.h":877:2 806 {*jcc}
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 23)
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 57 5 (set (reg:SI 4 si [orig:87 _9 ] [87])
+        (sign_extend:SI (mem:QI (plus:DI (reg/f:DI 40 r12 [orig:88 _14 ] [88])
+                    (const_int 67 [0x43])) [0 MEM[(const struct ctype *)_14]._M_widen[10]+0 S1 A8]))) "/usr/include/c++/11/ostream":685:19 153 {extendqisi2}
+     (nil))
+(jump_insn 57 20 58 5 (set (pc)
+        (label_ref 38)) "/usr/include/c++/11/bits/locale_facets.h":878:51 807 {jump}
+     (nil)
+ -> 38)
+(barrier 58 57 23)
+(code_label 23 58 24 6 5 (nil) [1 uses])
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg:DI 5 di)
+        (reg/f:DI 40 r12 [orig:88 _14 ] [88])) "/usr/include/c++/11/bits/locale_facets.h":879:21 74 {*movdi_internal}
+     (nil))
+(call_insn 26 25 27 6 (call (mem:QI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>) [0 _M_widen_init S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/locale_facets.h":879:21 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 27 26 28 6 (set (reg/f:DI 0 ax [orig:98 MEM[(const struct ctype *)_14].D.38127._vptr.facet ] [98])
+        (mem/f:DI (reg/f:DI 40 r12 [orig:88 _14 ] [88]) [2 MEM[(const struct ctype *)_14].D.38127._vptr.facet+0 S8 A64])) "/usr/include/c++/11/bits/locale_facets.h":880:23 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/f:DI 40 r12 [orig:88 _14 ] [88]) [2 MEM[(const struct ctype *)_14].D.38127._vptr.facet+0 S8 A64])
+        (nil)))
+(insn 28 27 4 6 (set (reg/f:DI 0 ax [orig:92 _25 ] [92])
+        (mem/f:DI (plus:DI (reg/f:DI 0 ax [orig:98 MEM[(const struct ctype *)_14].D.38127._vptr.facet ] [98])
+                (const_int 48 [0x30])) [23 MEM[(int (*) () *)_24 + 48B]+0 S8 A64])) "/usr/include/c++/11/bits/locale_facets.h":880:23 74 {*movdi_internal}
+     (nil))
+(insn 4 28 59 6 (set (reg:SI 4 si [orig:87 _9 ] [87])
+        (const_int 10 [0xa])) "/usr/include/c++/11/bits/locale_facets.h":880:23 75 {*movsi_internal}
+     (nil))
+(insn 59 4 30 6 (set (reg/f:DI 1 dx [99])
+        (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x7f497c525700 do_widen>)) 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x7f497c525700 do_widen>)
+        (nil)))
+(insn 30 59 31 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 0 ax [orig:92 _25 ] [92])
+            (reg/f:DI 1 dx [99]))) 12 {*cmpdi_1}
+     (expr_list:REG_EQUAL (compare:CCZ (reg/f:DI 0 ax [orig:92 _25 ] [92])
+            (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x7f497c525700 do_widen>))
+        (nil)))
+(jump_insn 31 30 32 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 38)
+            (pc))) 806 {*jcc}
+     (int_list:REG_BR_PROB 858993460 (nil))
+ -> 38)
+(note 32 31 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 34 32 35 7 (set (reg:DI 5 di)
+        (reg/f:DI 40 r12 [orig:88 _14 ] [88])) "/usr/include/c++/11/bits/locale_facets.h":880:23 74 {*movdi_internal}
+     (nil))
+(call_insn 35 34 36 7 (set (reg:QI 0 ax)
+        (call (mem:QI (reg/f:DI 0 ax [orig:92 _25 ] [92]) [0 *OBJ_TYPE_REF(_25;_14->6) S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/locale_facets.h":880:23 824 {*call_value}
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(note 36 35 37 7 NOTE_INSN_DELETED)
+(insn 37 36 38 7 (set (reg:SI 4 si [orig:87 _9 ] [87])
+        (sign_extend:SI (reg:QI 0 ax [101]))) "/usr/include/c++/11/ostream":685:19 153 {extendqisi2}
+     (nil))
+(code_label 38 37 39 8 6 (nil) [2 uses])
+(note 39 38 41 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 41 39 42 8 (set (reg:DI 5 di)
+        (reg/v/f:DI 6 bp [orig:95 __os ] [95])) "/usr/include/c++/11/ostream":685:19 74 {*movdi_internal}
+     (nil))
+(call_insn 42 41 43 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>) [0 put S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":685:19 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 43 42 77 8 (set (reg/f:DI 5 di [orig:86 _8 ] [86])
+        (reg:DI 0 ax [102])) "/usr/include/c++/11/ostream":685:19 74 {*movdi_internal}
+     (nil))
+(note 77 43 74 8 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 74 77 75 8 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/usr/include/c++/11/ostream":685:49 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 75 74 76 8 (set (reg:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "/usr/include/c++/11/ostream":685:49 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 76 75 45 8 (set (reg:DI 40 r12)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "/usr/include/c++/11/ostream":685:49 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(call_insn/j 45 76 46 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x7f497bfa4800 flush>) [0 flush S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":707:24 828 {*sibcall_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x7f497bfa4800 flush>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(barrier 46 45 60)
+(note 60 46 0 NOTE_INSN_DELETED)
+
+;; Function main (main, funcdef_no=1812, decl_uid=45098, cgraph_uid=546, symbol_order=576) (executed once)
+
+
+
+try_optimize_cfg iteration 1
+
+Forwarding edge 3->4 to 13 failed.
+Forwarding edge 11->12 to 3 failed.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Stack clash no probe small stack adjustment in prologue.
+Stack clash residual allocation in prologue.
+Stack clash no frame pointer needed.
+Stack clash not noreturn prologue.
+verify found no changes in insn with uid = 20.
+verify found no changes in insn with uid = 24.
+verify found no changes in insn with uid = 26.
+verify found no changes in insn with uid = 33.
+verify found no changes in insn with uid = 37.
+verify found no changes in insn with uid = 39.
+changing bb of uid 166
+  unscanned insn
+verify found no changes in insn with uid = 45.
+Edge 2->5 redirected to 15
+scanning new insn with uid = 168.
+deleting insn with uid = 7.
+scanning new insn with uid = 169.
+deleting insn with uid = 6.
+scanning new insn with uid = 170.
+deleting insn with uid = 5.
+Attempting shrink-wrapping optimization.
+Block 2 needs prologue due to insn 4:
+(insn 4 2 147 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 7 sp)
+                        (const_int 8 [0x8])) [11 D.50135+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [7 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (reg:DI 0 ax [128])
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "../fib.cpp":7:1 1159 {stack_protect_set_1_di}
+     (nil))
+Block 3 needs prologue due to insn 108:
+(insn 108 46 109 3 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 7 sp)
+                                (const_int 8 [0x8])) [11 D.50135+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [7 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (reg:DI 0 ax [129]))
+        ]) "../fib.cpp":28:1 1164 {stack_protect_test_1_di}
+     (nil))
+Block 15 needs prologue due to insn 170:
+(insn 170 166 169 15 (set (reg/v:SI 40 r12 [orig:89 i ] [89])
+        (const_int 1 [0x1])) -1
+     (nil))
+Block 5 needs prologue due to insn 52:
+(insn 52 51 53 5 (set (reg/v:SI 41 r13 [orig:84 b ] [84])
+        (reg/v:SI 3 bx [orig:87 b ] [87])) 75 {*movsi_internal}
+     (nil))
+Block 6 needs prologue due to insn 65:
+(call_insn 65 64 66 6 (call (mem:QI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>) [0 __throw_bad_cast S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/basic_ios.h":50:18 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (nil))
+Block 9 needs prologue due to insn 78:
+(call_insn 78 77 79 9 (call (mem:QI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>) [0 _M_widen_init S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/locale_facets.h":879:21 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+Block 10 needs prologue due to insn 87:
+(call_insn 87 86 88 10 (set (reg:QI 0 ax)
+        (call (mem:QI (reg/f:DI 0 ax [orig:101 _41 ] [101]) [0 *OBJ_TYPE_REF(_41;_30->6) S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/locale_facets.h":880:23 824 {*call_value}
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+Block 11 needs prologue due to insn 94:
+(call_insn 94 93 95 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>) [0 put S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":685:19 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+Block 13 needs prologue due to insn 110:
+(call_insn 110 122 111 13 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f497bd71400 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "../fib.cpp":28:1 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f497bd71400 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+After wrapping required blocks, PRO is now 2
+Avoiding non-duplicatable blocks, PRO is now 2
+Bumping back to anticipatable blocks, PRO is now 2
+scanning new insn with uid = 158.
+scanning new insn with uid = 159.
+scanning new insn with uid = 160.
+scanning new insn with uid = 161.
+scanning new insn with uid = 162.
+scanning new insn with uid = 163.
+scanning new insn with uid = 164.
+scanning new insn with uid = 165.
+scanning new insn with uid = 149.
+scanning new insn with uid = 150.
+scanning new insn with uid = 151.
+scanning new insn with uid = 152.
+scanning new insn with uid = 153.
+scanning new insn with uid = 154.
+scanning new insn with uid = 155.
+verify found no changes in insn with uid = 15.
+verify found no changes in insn with uid = 21.
+verify found no changes in insn with uid = 25.
+verify found no changes in insn with uid = 28.
+verify found no changes in insn with uid = 34.
+verify found no changes in insn with uid = 38.
+verify found no changes in insn with uid = 41.
+verify found no changes in insn with uid = 57.
+verify found no changes in insn with uid = 65.
+verify found no changes in insn with uid = 78.
+verify found no changes in insn with uid = 87.
+verify found no changes in insn with uid = 94.
+verify found no changes in insn with uid = 97.
+verify found no changes in insn with uid = 110.
+
+
+try_optimize_cfg iteration 1
+
+Forwarding edge 3->4 to 14 failed.
+Forwarding edge 12->13 to 3 failed.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9] 40 [r12] 41 [r13] 42 [r14] 43 [r15]
+;;  exit block uses 	 0 [ax] 3 [bx] 6 [bp] 7 [sp] 40 [r12] 41 [r13] 42 [r14] 43 [r15]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags] 40 [r12] 41 [r13] 42 [r14] 43 [r15]
+;;  ref usage 	r0={24d,13u,1e} r1={17d,2u} r2={16d,1u} r3={4d,5u} r4={24d,8u} r5={27d,12u} r6={3d,5u,1e} r7={15d,50u} r8={14d} r9={14d} r10={14d} r11={14d} r12={14d} r13={14d} r14={14d} r15={14d} r17={25d,6u} r18={14d} r20={15d} r21={15d} r22={15d} r23={15d} r24={15d} r25={15d} r26={15d} r27={15d} r28={14d} r29={14d} r30={14d} r31={14d} r32={14d} r33={14d} r34={14d} r35={14d} r36={15d} r37={15d} r38={14d} r39={14d} r40={4d,4u} r41={3d,3u} r42={3d,7u} r43={3d,8u,1e} r44={14d} r45={14d} r46={14d} r47={14d} r48={14d} r49={14d} r50={14d} r51={14d} r52={14d} r53={14d} r54={14d} r55={14d} r56={14d} r57={14d} r58={14d} r59={14d} r60={14d} r61={14d} r62={14d} r63={14d} r64={14d} r65={14d} r66={14d} r67={14d} r68={14d} r69={14d} r70={14d} r71={14d} r72={14d} r73={14d} r74={14d} r75={14d} 
+;;    total ref usage 1159{1032d,124u,3e} in 85{71 regular + 14 call} insns.
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 149 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 149 9 150 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 43 r15)) "../fib.cpp":7:1 -1
+     (nil))
+(insn/f 150 149 151 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 42 r14)) "../fib.cpp":7:1 -1
+     (nil))
+(insn/f 151 150 152 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 41 r13)) "../fib.cpp":7:1 -1
+     (nil))
+(insn/f 152 151 153 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 40 r12)) "../fib.cpp":7:1 -1
+     (nil))
+(insn/f 153 152 154 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 6 bp)) "../fib.cpp":7:1 -1
+     (nil))
+(insn/f 154 153 155 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 3 bx)) "../fib.cpp":7:1 -1
+     (nil))
+(insn/f 155 154 156 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "../fib.cpp":7:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+(note 156 155 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 156 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 2 147 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 7 sp)
+                        (const_int 8 [0x8])) [11 D.50135+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [7 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (reg:DI 0 ax [128])
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "../fib.cpp":7:1 1159 {stack_protect_set_1_di}
+     (nil))
+(insn 147 4 13 2 (set (reg/f:DI 4 si [106])
+        (plus:DI (reg/f:DI 7 sp)
+            (const_int 4 [0x4]))) "../fib.cpp":13:9 206 {*leadi}
+     (nil))
+(insn 13 147 15 2 (set (reg/f:DI 5 di [107])
+        (symbol_ref:DI ("_ZSt3cin") [flags 0x40]  <var_decl 0x7f497c104ab0 cin>)) "../fib.cpp":13:9 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("_ZSt3cin") [flags 0x40]  <var_decl 0x7f497c104ab0 cin>)
+        (nil)))
+(call_insn 15 13 16 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x7f497c02d400 operator>>>) [0 operator>> S1 A8])
+            (const_int 0 [0]))) "../fib.cpp":13:9 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x7f497c02d400 operator>>>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 16 15 17 2 (set (reg:DI 1 dx)
+        (const_int 2 [0x2])) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (nil))
+(insn 17 16 19 2 (set (reg/f:DI 4 si [108])
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f497bd65750 *.LC0>)) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f497bd65750 *.LC0>)
+        (nil)))
+(insn 19 17 20 2 (set (reg/f:DI 42 r14 [121])
+        (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)
+        (nil)))
+(insn 20 19 21 2 (set (reg:DI 5 di)
+        (reg/f:DI 42 r14 [121])) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)
+        (nil)))
+(call_insn 21 20 22 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l") [flags 0x41]  <function_decl 0x7f497d24c600 __ostream_insert>) [0 __ostream_insert S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":616:18 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l") [flags 0x41]  <function_decl 0x7f497d24c600 __ostream_insert>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 22 21 24 2 (set (reg:SI 4 si)
+        (const_int 0 [0])) "../fib.cpp":15:18 75 {*movsi_internal}
+     (nil))
+(insn 24 22 25 2 (set (reg:DI 5 di)
+        (reg/f:DI 42 r14 [121])) "../fib.cpp":15:18 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)
+        (nil)))
+(call_insn 25 24 26 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f497bf96b00 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "../fib.cpp":15:18 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f497bf96b00 operator<<>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 26 25 28 2 (set (reg/f:DI 5 di [orig:85 _9 ] [85])
+        (reg:DI 0 ax [123])) "../fib.cpp":15:18 74 {*movdi_internal}
+     (nil))
+(call_insn 28 26 29 2 (call (mem:QI (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x7f497bd34700 endl.isra>) [0 endl.isra S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/ostream":113:13 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x7f497bd34700 endl.isra>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 29 28 30 2 (set (reg:DI 1 dx)
+        (const_int 2 [0x2])) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (nil))
+(insn 30 29 33 2 (set (reg/f:DI 4 si [111])
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f497bd657e0 *.LC1>)) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f497bd657e0 *.LC1>)
+        (nil)))
+(insn 33 30 34 2 (set (reg:DI 5 di)
+        (reg/f:DI 42 r14 [121])) "/usr/include/c++/11/ostream":616:18 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)
+        (nil)))
+(call_insn 34 33 35 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l") [flags 0x41]  <function_decl 0x7f497d24c600 __ostream_insert>) [0 __ostream_insert S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":616:18 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l") [flags 0x41]  <function_decl 0x7f497d24c600 __ostream_insert>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 35 34 37 2 (set (reg:SI 4 si)
+        (const_int 10 [0xa])) "../fib.cpp":19:18 75 {*movsi_internal}
+     (nil))
+(insn 37 35 38 2 (set (reg:DI 5 di)
+        (reg/f:DI 42 r14 [121])) "../fib.cpp":19:18 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)
+        (nil)))
+(call_insn 38 37 39 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f497bf96b00 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "../fib.cpp":19:18 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f497bf96b00 operator<<>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 39 38 41 2 (set (reg/f:DI 5 di [orig:86 _11 ] [86])
+        (reg:DI 0 ax [124])) "../fib.cpp":19:18 74 {*movdi_internal}
+     (nil))
+(call_insn 41 39 81 2 (call (mem:QI (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x7f497bd34700 endl.isra>) [0 endl.isra S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/ostream":113:13 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x7f497bd34700 endl.isra>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(note 81 41 44 2 NOTE_INSN_DELETED)
+(insn 44 81 45 2 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 7 sp)
+                    (const_int 4 [0x4])) [12 n+0 S4 A32])
+            (const_int 1 [0x1]))) "../fib.cpp":20:11 11 {*cmpsi_1}
+     (nil))
+(jump_insn 45 44 102 2 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 167)
+            (pc))) "../fib.cpp":20:11 806 {*jcc}
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 167)
+(code_label 102 45 46 3 15 (nil) [1 uses])
+(note 46 102 108 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 108 46 109 3 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 7 sp)
+                                (const_int 8 [0x8])) [11 D.50135+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [7 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (reg:DI 0 ax [129]))
+        ]) "../fib.cpp":28:1 1164 {stack_protect_test_1_di}
+     (nil))
+(jump_insn 109 108 136 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 112)
+            (pc))) "../fib.cpp":28:1 806 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 112)
+(note 136 109 138 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 138 136 139 4 (set (pc)
+        (label_ref 137)) 807 {jump}
+     (nil)
+ -> 137)
+(barrier 139 138 167)
+(code_label 167 139 166 5 22 (nil) [1 uses])
+(note 166 167 170 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 170 166 169 5 (set (reg/v:SI 40 r12 [orig:89 i ] [89])
+        (const_int 1 [0x1])) -1
+     (nil))
+(insn 169 170 168 5 (set (reg/v:SI 3 bx [orig:87 b ] [87])
+        (const_int 1 [0x1])) -1
+     (nil))
+(insn 168 169 50 5 (set (reg/v:SI 0 ax [orig:99 a ] [99])
+        (const_int 0 [0])) -1
+     (nil))
+(code_label 50 168 51 6 11 (nil) [1 uses])
+(note 51 50 52 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 6 (set (reg/v:SI 41 r13 [orig:84 b ] [84])
+        (reg/v:SI 3 bx [orig:87 b ] [87])) 75 {*movsi_internal}
+     (nil))
+(insn 53 52 54 6 (parallel [
+            (set (reg/v:SI 3 bx [orig:87 b ] [87])
+                (plus:SI (reg/v:SI 3 bx [orig:87 b ] [87])
+                    (reg/v:SI 0 ax [orig:99 a ] [99])))
+            (clobber (reg:CC 17 flags))
+        ]) "../fib.cpp":23:5 209 {*addsi_1}
+     (nil))
+(insn 54 53 56 6 (set (reg:SI 4 si)
+        (reg/v:SI 3 bx [orig:87 b ] [87])) "../fib.cpp":24:11 75 {*movsi_internal}
+     (nil))
+(insn 56 54 57 6 (set (reg:DI 5 di)
+        (reg/f:DI 42 r14 [121])) "../fib.cpp":24:11 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7f497c104b40 cout>)
+        (nil)))
+(call_insn 57 56 58 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f497bf96b00 operator<<>) [0 operator<< S1 A8])
+            (const_int 0 [0]))) "../fib.cpp":24:11 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7f497bf96b00 operator<<>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 58 57 59 6 (set (reg/f:DI 6 bp [orig:88 _15 ] [88])
+        (reg:DI 0 ax [125])) "../fib.cpp":24:11 74 {*movdi_internal}
+     (nil))
+(insn 59 58 60 6 (set (reg/f:DI 0 ax [orig:116 _15->_vptr.basic_ostream ] [116])
+        (mem/f:DI (reg/f:DI 6 bp [orig:88 _15 ] [88]) [2 _15->_vptr.basic_ostream+0 S8 A64])) "/usr/include/c++/11/ostream":685:39 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/f:DI 6 bp [orig:88 _15 ] [88]) [2 _15->_vptr.basic_ostream+0 S8 A64])
+        (nil)))
+(insn 60 59 61 6 (set (reg:DI 0 ax [orig:117 MEM[(long int *)_22 + -24B] ] [117])
+        (mem:DI (plus:DI (reg/f:DI 0 ax [orig:116 _15->_vptr.basic_ostream ] [116])
+                (const_int -24 [0xffffffffffffffe8])) [7 MEM[(long int *)_22 + -24B]+0 S8 A64])) 74 {*movdi_internal}
+     (nil))
+(insn 61 60 62 6 (set (reg/f:DI 43 r15 [orig:95 _30 ] [95])
+        (mem/f:DI (plus:DI (plus:DI (reg/f:DI 6 bp [orig:88 _15 ] [88])
+                    (reg:DI 0 ax [orig:117 MEM[(long int *)_22 + -24B] ] [117]))
+                (const_int 240 [0xf0])) [19 MEM[(const struct __ctype_type * *)_25 + 240B]+0 S8 A64])) 74 {*movdi_internal}
+     (nil))
+(insn 62 61 63 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 43 r15 [orig:95 _30 ] [95])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/basic_ios.h":49:7 8 {*cmpdi_ccno_1}
+     (nil))
+(jump_insn 63 62 64 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "/usr/include/c++/11/bits/basic_ios.h":49:7 806 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 67)
+(note 64 63 65 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(call_insn 65 64 66 7 (call (mem:QI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>) [0 __throw_bad_cast S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/basic_ios.h":50:18 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x7f497d673800 __throw_bad_cast>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 66 65 67)
+(code_label 67 66 68 8 12 (nil) [1 uses])
+(note 68 67 69 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:QI (plus:DI (reg/f:DI 43 r15 [orig:95 _30 ] [95])
+                    (const_int 56 [0x38])) [0 MEM[(const struct ctype *)_30]._M_widen_ok+0 S1 A64])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/locale_facets.h":877:2 5 {*cmpqi_ccno_1}
+     (nil))
+(jump_insn 70 69 71 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) "/usr/include/c++/11/bits/locale_facets.h":877:2 806 {*jcc}
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 75)
+(note 71 70 72 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 140 9 (set (reg:SI 4 si [orig:83 prephitmp_2 ] [83])
+        (sign_extend:SI (mem:QI (plus:DI (reg/f:DI 43 r15 [orig:95 _30 ] [95])
+                    (const_int 67 [0x43])) [0 MEM[(const struct ctype *)_30]._M_widen[10]+0 S1 A8]))) "/usr/include/c++/11/ostream":685:19 153 {extendqisi2}
+     (nil))
+(jump_insn 140 72 141 9 (set (pc)
+        (label_ref 90)) "/usr/include/c++/11/bits/locale_facets.h":878:51 807 {jump}
+     (nil)
+ -> 90)
+(barrier 141 140 75)
+(code_label 75 141 76 10 13 (nil) [1 uses])
+(note 76 75 77 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 10 (set (reg:DI 5 di)
+        (reg/f:DI 43 r15 [orig:95 _30 ] [95])) "/usr/include/c++/11/bits/locale_facets.h":879:21 74 {*movdi_internal}
+     (nil))
+(call_insn 78 77 79 10 (call (mem:QI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>) [0 _M_widen_init S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/bits/locale_facets.h":879:21 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x7f497c525c00 _M_widen_init>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 79 78 80 10 (set (reg/f:DI 0 ax [orig:118 MEM[(const struct ctype *)_30].D.38127._vptr.facet ] [118])
+        (mem/f:DI (reg/f:DI 43 r15 [orig:95 _30 ] [95]) [2 MEM[(const struct ctype *)_30].D.38127._vptr.facet+0 S8 A64])) "/usr/include/c++/11/bits/locale_facets.h":880:23 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/f:DI 43 r15 [orig:95 _30 ] [95]) [2 MEM[(const struct ctype *)_30].D.38127._vptr.facet+0 S8 A64])
+        (nil)))
+(insn 80 79 8 10 (set (reg/f:DI 0 ax [orig:101 _41 ] [101])
+        (mem/f:DI (plus:DI (reg/f:DI 0 ax [orig:118 MEM[(const struct ctype *)_30].D.38127._vptr.facet ] [118])
+                (const_int 48 [0x30])) [23 MEM[(int (*) () *)_40 + 48B]+0 S8 A64])) "/usr/include/c++/11/bits/locale_facets.h":880:23 74 {*movdi_internal}
+     (nil))
+(insn 8 80 146 10 (set (reg:SI 4 si [orig:83 prephitmp_2 ] [83])
+        (const_int 10 [0xa])) "/usr/include/c++/11/bits/locale_facets.h":880:23 75 {*movsi_internal}
+     (nil))
+(insn 146 8 82 10 (set (reg:DI 2 cx [131])
+        (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x7f497c525700 do_widen>)) 74 {*movdi_internal}
+     (nil))
+(insn 82 146 83 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 0 ax [orig:101 _41 ] [101])
+            (reg:DI 2 cx [131]))) 12 {*cmpdi_1}
+     (expr_list:REG_EQUAL (compare:CCZ (reg/f:DI 0 ax [orig:101 _41 ] [101])
+            (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x7f497c525700 do_widen>))
+        (nil)))
+(jump_insn 83 82 84 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 90)
+            (pc))) 806 {*jcc}
+     (int_list:REG_BR_PROB 858993460 (nil))
+ -> 90)
+(note 84 83 86 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 86 84 87 11 (set (reg:DI 5 di)
+        (reg/f:DI 43 r15 [orig:95 _30 ] [95])) "/usr/include/c++/11/bits/locale_facets.h":880:23 74 {*movdi_internal}
+     (nil))
+(call_insn 87 86 88 11 (set (reg:QI 0 ax)
+        (call (mem:QI (reg/f:DI 0 ax [orig:101 _41 ] [101]) [0 *OBJ_TYPE_REF(_41;_30->6) S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/bits/locale_facets.h":880:23 824 {*call_value}
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(note 88 87 89 11 NOTE_INSN_DELETED)
+(insn 89 88 90 11 (set (reg:SI 4 si [orig:83 prephitmp_2 ] [83])
+        (sign_extend:SI (reg:QI 0 ax [126]))) "/usr/include/c++/11/ostream":685:19 153 {extendqisi2}
+     (nil))
+(code_label 90 89 91 12 14 (nil) [2 uses])
+(note 91 90 93 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 93 91 94 12 (set (reg:DI 5 di)
+        (reg/f:DI 6 bp [orig:88 _15 ] [88])) "/usr/include/c++/11/ostream":685:19 74 {*movdi_internal}
+     (nil))
+(call_insn 94 93 95 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>) [0 put S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":685:19 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x7f497bfa4500 put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 95 94 97 12 (set (reg/f:DI 5 di [orig:94 _28 ] [94])
+        (reg:DI 0 ax [127])) "/usr/include/c++/11/ostream":685:19 74 {*movdi_internal}
+     (nil))
+(call_insn 97 95 98 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x7f497bfa4800 flush>) [0 flush S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/ostream":707:24 824 {*call_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x7f497bfa4800 flush>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 98 97 99 12 (parallel [
+            (set (reg/v:SI 40 r12 [orig:89 i ] [89])
+                (plus:SI (reg/v:SI 40 r12 [orig:89 i ] [89])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "../fib.cpp":26:5 209 {*addsi_1}
+     (nil))
+(insn 99 98 100 12 (set (reg/v:SI 0 ax [orig:99 a ] [99])
+        (reg/v:SI 41 r13 [orig:84 b ] [84])) 75 {*movsi_internal}
+     (nil))
+(insn 100 99 101 12 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 7 sp)
+                    (const_int 4 [0x4])) [12 n+0 S4 A32])
+            (reg/v:SI 40 r12 [orig:89 i ] [89]))) "../fib.cpp":20:11 11 {*cmpsi_1}
+     (nil))
+(jump_insn 101 100 142 12 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 50)
+            (pc))) "../fib.cpp":20:11 806 {*jcc}
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 50)
+(note 142 101 143 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 143 142 144 13 (set (pc)
+        (label_ref 102)) 807 {jump}
+     (nil)
+ -> 102)
+(barrier 144 143 137)
+(code_label 137 144 122 14 21 (nil) [1 uses])
+(note 122 137 110 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(call_insn 110 122 111 14 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f497bd71400 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "../fib.cpp":28:1 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f497bd71400 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 111 110 112)
+(code_label 112 111 123 15 16 (nil) [1 uses])
+(note 123 112 113 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 113 123 114 15 (set (reg/i:SI 0 ax)
+        (const_int 0 [0])) "../fib.cpp":28:1 75 {*movsi_internal}
+     (nil))
+(insn 114 113 157 15 (use (reg/i:SI 0 ax)) "../fib.cpp":28:1 -1
+     (nil))
+(note 157 114 158 15 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 158 157 159 15 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn/f 159 158 160 15 (set (reg:DI 3 bx)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 160 159 161 15 (set (reg:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 161 160 162 15 (set (reg:DI 40 r12)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 162 161 163 15 (set (reg:DI 41 r13)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 163 162 164 15 (set (reg:DI 42 r14)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn/f 164 163 165 15 (set (reg:DI 43 r15)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(jump_insn 165 164 173 15 (simple_return) "../fib.cpp":28:1 -1
+     (nil)
+ -> simple_return)
+(barrier 173 165 145)
+(note 145 173 0 NOTE_INSN_DELETED)
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2302, decl_uid=49917, cgraph_uid=1036, symbol_order=1211) (executed once)
+
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Stack clash no probe small stack adjustment in prologue.
+Stack clash residual allocation in prologue.
+Stack clash no frame pointer needed.
+Stack clash not noreturn prologue.
+Attempting shrink-wrapping optimization.
+Block 2 needs prologue due to insn 5:
+(insn 5 2 6 2 (set (reg/f:DI 6 bp [82])
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f497c1043f0 __ioinit>)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f497c1043f0 __ioinit>)
+        (nil)))
+After wrapping required blocks, PRO is now 2
+Avoiding non-duplicatable blocks, PRO is now 2
+Bumping back to anticipatable blocks, PRO is now 2
+scanning new insn with uid = 20.
+scanning new insn with uid = 27.
+verify found no changes in insn with uid = 7.
+verify found no changes in insn with uid = 15.
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+_GLOBAL__sub_I_main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 4 [si] 5 [di] 6 [bp] 7 [sp]
+;;  ref usage 	r0={3d} r1={4d,1u} r2={3d} r4={4d,1u} r5={5d,2u} r6={3d,4u} r7={3d,6u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r17={2d} r18={2d} r20={3d} r21={3d} r22={3d} r23={3d} r24={3d} r25={3d} r26={3d} r27={3d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={3d} r37={3d} r38={2d} r39={2d} r44={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} 
+;;    total ref usage 173{159d,14u,0e} in 9{7 regular + 2 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 20 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 20 3 21 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 6 bp)) "../fib.cpp":28:1 -1
+     (nil))
+(note 21 20 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 21 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 6 bp [82])
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f497c1043f0 __ioinit>)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f497c1043f0 __ioinit>)
+        (nil)))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (reg/f:DI 6 bp [82])) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f497c1043f0 __ioinit>)
+        (nil)))
+(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x7f497c3e2900 __ct_comp >) [0 __ct_comp  S1 A8])
+        (const_int 0 [0])) "/usr/include/c++/11/iostream":74:25 813 {*call}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x7f497c3e2900 __ct_comp >)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 8 7 11 2 (set (reg/f:DI 1 dx [83])
+        (symbol_ref:DI ("__dso_handle") [flags 0x42]  <var_decl 0x7f497bc6f7e0 __dso_handle>)) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("__dso_handle") [flags 0x42]  <var_decl 0x7f497bc6f7e0 __dso_handle>)
+        (nil)))
+(insn 11 8 14 2 (set (reg:DI 4 si)
+        (reg/f:DI 6 bp [82])) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7f497c1043f0 __ioinit>)
+        (nil)))
+(insn 14 11 28 2 (set (reg:DI 5 di)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7f497c3e2b00 __dt_comp >)
+                    ] UNSPEC_GOTPCREL)) [26  S8 A8])) "/usr/include/c++/11/iostream":74:25 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7f497c3e2b00 __dt_comp >)
+        (nil)))
+(note 28 14 27 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 27 28 15 2 (set (reg:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "../fib.cpp":28:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 7 sp)
+                (const_int 8 [0x8])))
+        (nil)))
+(call_insn/j 15 27 16 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x7f497bca9500 __cxa_atexit>) [0 __cxa_atexit S1 A8])
+            (const_int 0 [0]))) "/usr/include/c++/11/iostream":74:25 828 {*sibcall_value}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x7f497bca9500 __cxa_atexit>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(barrier 16 15 19)
+(note 19 16 0 NOTE_INSN_DELETED)

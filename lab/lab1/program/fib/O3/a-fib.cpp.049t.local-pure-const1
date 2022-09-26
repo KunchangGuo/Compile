@@ -1,0 +1,699 @@
+
+;; Function std::basic_ostream<char>::operator<< (_ZNSolsEPFRSoS_E, funcdef_no=2061, decl_uid=42317, cgraph_uid=795, symbol_order=828)
+
+
+
+ local analysis of std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>]/828
+   scanning: _6 = __pf_2(D) (this_4(D));
+    can throw externally to lp 0
+  scanning: return _6;
+Function is locally looping.
+Function is locally throwing.
+struct __ostream_type & std::basic_ostream<char>::operator<< (struct basic_ostream * const this, struct __ostream_type & (*<T65bd>) (struct __ostream_type &) __pf)
+{
+  struct __ostream_type & _6;
+
+  <bb 2> [local count: 1073741824]:
+  _6 = __pf_2(D) (this_4(D));
+  return _6;
+
+}
+
+
+
+;; Function std::basic_ios<char>::rdstate (_ZNKSt9basic_iosIcSt11char_traitsIcEE7rdstateEv, funcdef_no=2184, decl_uid=41520, cgraph_uid=918, symbol_order=951)
+
+
+
+ local analysis of std::ios_base::iostate std::basic_ios<_CharT, _Traits>::rdstate() const [with _CharT = char; _Traits = std::char_traits<char>]/951
+   scanning: _3 = this_2(D)->D.41638._M_streambuf_state;
+    Indirect ref read is not const
+  scanning: return _3;
+Function is locally pure.
+Function found to be pure: std::basic_ios<char>::rdstate
+Declaration updated to be pure: std::basic_ios<char>::rdstate
+iostate std::basic_ios<char>::rdstate (const struct basic_ios * const this)
+{
+  iostate _3;
+
+  <bb 2> [local count: 1073741824]:
+  _3 = this_2(D)->D.41638._M_streambuf_state;
+  return _3;
+
+}
+
+
+
+;; Function std::flush<char, std::char_traits<char> > (_ZSt5flushIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_, funcdef_no=2141, decl_uid=42537, cgraph_uid=875, symbol_order=908)
+
+
+
+ local analysis of std::basic_ostream<_CharT, _Traits>& std::flush(std::basic_ostream<_CharT, _Traits>&) [with _CharT = char; _Traits = std::char_traits<char>]/908
+   scanning: _4 = std::basic_ostream<char>::flush (__os_2(D));
+    can throw externally to lp 0
+     callee:_ZNSo5flushEv
+  scanning: return _4;
+Function is locally looping.
+Function is locally throwing.
+struct basic_ostream & std::flush<char, std::char_traits<char> > (struct basic_ostream & __os)
+{
+  struct basic_ostream & _4;
+
+  <bb 2> [local count: 1073741824]:
+  _4 = std::basic_ostream<char>::flush (__os_2(D));
+  return _4;
+
+}
+
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2301, decl_uid=49911, cgraph_uid=1035, symbol_order=1092)
+
+
+
+ local analysis of void __static_initialization_and_destruction_0(int, int)/1092
+   scanning: if (__initialize_p_2(D) == 1)
+  scanning: if (__priority_4(D) == 65535)
+  scanning: std::ios_base::Init::Init (&__ioinit);
+    can throw externally to lp 0
+     callee:_ZNSt8ios_base4InitC1Ev
+  scanning: __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  scanning: return;
+Function is locally looping.
+void __static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  <bb 2> [local count: 1073741823]:
+  if (__initialize_p_2(D) == 1)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 5>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  if (__priority_4(D) == 65535)
+    goto <bb 4>; [20.24%]
+  else
+    goto <bb 5>; [79.76%]
+
+  <bb 4> [local count: 73890618]:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+
+  <bb 5> [local count: 1073741824]:
+  return;
+
+}
+
+
+
+;; Function std::__constant_string_p<char> (_ZSt19__constant_string_pIcEbPKT_, funcdef_no=477, decl_uid=13474, cgraph_uid=123, symbol_order=132)
+
+
+
+ local analysis of constexpr bool std::__constant_string_p(const _CharT*) [with _CharT = char]/132
+   scanning: return 0;
+Function is locally const.
+Function found to be const: std::__constant_string_p<char>
+Declaration updated to be const: std::__constant_string_p<char>
+__attribute__((always_inline))
+bool std::__constant_string_p<char> (const char * __s)
+{
+  <bb 2> [local count: 1073741824]:
+  return 0;
+
+}
+
+
+
+;; Function __gnu_cxx::char_traits<char>::eq (_ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_, funcdef_no=479, decl_uid=13494, cgraph_uid=124, symbol_order=133)
+
+
+
+ local analysis of static constexpr bool __gnu_cxx::char_traits<_CharT>::eq(const char_type&, const char_type&) [with _CharT = char]/133
+   scanning: _1 = *__c1_4(D);
+    Indirect ref read is not const
+  scanning: _2 = *__c2_5(D);
+    Indirect ref read is not const
+  scanning: _6 = _1 == _2;
+  scanning: return _6;
+Function is locally pure.
+Function found to be pure: __gnu_cxx::char_traits<char>::eq
+Declaration updated to be pure: __gnu_cxx::char_traits<char>::eq
+bool __gnu_cxx::char_traits<char>::eq (const char_type & __c1, const char_type & __c2)
+{
+  char _1;
+  char _2;
+  bool _6;
+
+  <bb 2> [local count: 1073741824]:
+  _1 = *__c1_4(D);
+  _2 = *__c2_5(D);
+  _6 = _1 == _2;
+  return _6;
+
+}
+
+
+
+;; Function __gnu_cxx::char_traits<char>::length (_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc, funcdef_no=478, decl_uid=13504, cgraph_uid=125, symbol_order=134)
+
+
+
+ local analysis of static constexpr std::size_t __gnu_cxx::char_traits<_CharT>::length(const char_type*) [with _CharT = char]/134
+   scanning: __i_13 = __i_3 + 1;
+  scanning: _1 = __p_8(D) + __i_3;
+  scanning: _9 = *_1;
+    Indirect ref read is not const
+  scanning: if (_9 != 0)
+  scanning: return __i_12;
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 1 }
+Function is locally pure.
+Function found to be pure: __gnu_cxx::char_traits<char>::length
+Declaration updated to be pure: __gnu_cxx::char_traits<char>::length
+size_t __gnu_cxx::char_traits<char>::length (const char_type * __p)
+{
+  bool D.50010;
+  size_t __i;
+  const char_type D.13543;
+  const char_type * _1;
+  char _9;
+  const char_type _18(D);
+
+  <bb 2> [local count: 118111600]:
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630225]:
+  __i_13 = __i_3 + 1;
+
+  <bb 4> [local count: 1073741824]:
+  # __i_3 = PHI <0(2), __i_13(3)>
+  _1 = __p_8(D) + __i_3;
+  _9 = *_1;
+  if (_9 != 0)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  # __i_12 = PHI <__i_3(4)>
+  return __i_12;
+
+}
+
+
+
+;; Function std::char_traits<char>::length (_ZNSt11char_traitsIcE6lengthEPKc, funcdef_no=476, decl_uid=13412, cgraph_uid=126, symbol_order=135)
+
+
+
+ local analysis of static constexpr std::size_t std::char_traits<char>::length(const char_type*)/135
+   scanning: _7 = __builtin_strlen (__s_4(D));
+  scanning: return _7;
+Function is locally pure.
+Function found to be pure: std::char_traits<char>::length
+Declaration updated to be pure: std::char_traits<char>::length
+size_t std::char_traits<char>::length (const char_type * __s)
+{
+  size_t __i;
+  size_t D.50016;
+  bool D.50013;
+  size_t _7;
+
+  <bb 2> [local count: 1073741824]:
+  _7 = __builtin_strlen (__s_4(D));
+  return _7;
+
+}
+
+
+
+;; Function std::operator| (_ZStorSt12_Ios_IostateS_, funcdef_no=1414, decl_uid=35467, cgraph_uid=473, symbol_order=502)
+
+
+
+ local analysis of constexpr std::_Ios_Iostate std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)/502
+   scanning: _3 = __a_1(D) | __b_2(D);
+  scanning: return _3;
+Function is locally const.
+Function found to be const: std::operator|
+Declaration updated to be const: std::operator|
+_Ios_Iostate std::operator| (_Ios_Iostate __a, _Ios_Iostate __b)
+{
+  _Ios_Iostate _3;
+
+  <bb 2> [local count: 1073741824]:
+  _3 = __a_1(D) | __b_2(D);
+  return _3;
+
+}
+
+
+
+;; Function std::basic_ios<char>::setstate (_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateESt12_Ios_Iostate, funcdef_no=2139, decl_uid=41525, cgraph_uid=873, symbol_order=906)
+
+
+
+ local analysis of void std::basic_ios<_CharT, _Traits>::setstate(std::ios_base::iostate) [with _CharT = char; _Traits = std::char_traits<char>]/906
+   scanning: _5 = MEM[(const struct basic_ios *)this_4(D)].D.41638._M_streambuf_state;
+    Indirect ref read is not const
+  scanning: _8 = _5 | __state_7(D);
+  scanning: std::basic_ios<char>::clear (this_4(D), _8);
+    can throw externally to lp 0
+     callee:_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate
+  scanning: return;
+Function is locally looping.
+Function is locally throwing.
+void std::basic_ios<char>::setstate (struct basic_ios * const this, iostate __state)
+{
+  iostate D.50023;
+  _Ios_Iostate D.50021;
+  _Ios_Iostate _5;
+  _Ios_Iostate _8;
+
+  <bb 2> [local count: 1073741824]:
+  _5 = MEM[(const struct basic_ios *)this_4(D)].D.41638._M_streambuf_state;
+  _8 = _5 | __state_7(D);
+  std::basic_ios<char>::clear (this_4(D), _8);
+  return;
+
+}
+
+
+
+;; Function std::operator<< <std::char_traits<char> > (_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc, funcdef_no=2059, decl_uid=42572, cgraph_uid=793, symbol_order=826)
+
+
+
+ local analysis of std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]/826
+   scanning: if (__s_9(D) == 0B)
+  scanning: _1 = __out_13(D)->_vptr.basic_ostream;
+    Indirect ref read is not const
+  scanning: _3 = MEM[(long int *)_1 + -24B];
+    Indirect ref read is not const
+  scanning: _4 = (sizetype) _3;
+  scanning: _5 = __out_13(D) + _4;
+  scanning: _11 = MEM[(const struct basic_ios *)_5].D.41638._M_streambuf_state;
+    Indirect ref read is not const
+  scanning: _17 = _11 | 1;
+  scanning: std::basic_ios<char>::clear (_5, _17);
+    can throw externally to lp 0
+     callee:_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate
+  scanning: _18 = __builtin_strlen (__s_9(D));
+  scanning: _7 = (long int) _18;
+  scanning: std::__ostream_insert<char, std::char_traits<char> > (__out_13(D), __s_9(D), _7);
+    can throw externally to lp 0
+     callee:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+  scanning: return __out_13(D);
+Function is locally looping.
+Function is locally throwing.
+struct basic_ostream & std::operator<< <std::char_traits<char> > (struct basic_ostream & __out, const char * __s)
+{
+  size_t D.50028;
+  int (*) () * _1;
+  long int _3;
+  sizetype _4;
+  struct basic_ios * _5;
+  long int _7;
+  _Ios_Iostate _11;
+  _Ios_Iostate _17;
+  long unsigned int _18;
+
+  <bb 2> [local count: 1073741824]:
+  if (__s_9(D) == 0B)
+    goto <bb 3>; [30.00%]
+  else
+    goto <bb 4>; [70.00%]
+
+  <bb 3> [local count: 322122544]:
+  _1 = __out_13(D)->_vptr.basic_ostream;
+  _3 = MEM[(long int *)_1 + -24B];
+  _4 = (sizetype) _3;
+  _5 = __out_13(D) + _4;
+  _11 = MEM[(const struct basic_ios *)_5].D.41638._M_streambuf_state;
+  _17 = _11 | 1;
+  std::basic_ios<char>::clear (_5, _17);
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 751619281]:
+  _18 = __builtin_strlen (__s_9(D));
+  _7 = (long int) _18;
+  std::__ostream_insert<char, std::char_traits<char> > (__out_13(D), __s_9(D), _7);
+
+  <bb 5> [local count: 1073741824]:
+  return __out_13(D);
+
+}
+
+
+
+;; Function std::ctype<char>::widen (_ZNKSt5ctypeIcE5widenEc, funcdef_no=1560, decl_uid=38013, cgraph_uid=531, symbol_order=560)
+
+
+
+ local analysis of std::ctype<char>::char_type std::ctype<char>::widen(char) const/560
+   scanning: _1 = this_11(D)->_M_widen_ok;
+    Indirect ref read is not const
+  scanning: if (_1 != 0)
+  scanning: __c.1_2 = (unsigned char) __c_13(D);
+  scanning: _3 = (int) __c.1_2;
+  scanning: _17 = this_11(D)->_M_widen[_3];
+    Indirect ref read is not const
+  scanning: // predicted unlikely by early return (on trees) predictor.
+  scanning: std::ctype<char>::_M_widen_init (this_11(D));
+    can throw externally to lp 0
+     callee:_ZNKSt5ctypeIcE13_M_widen_initEv
+  scanning: _4 = this_11(D)->D.38127._vptr.facet;
+    Indirect ref read is not const
+  scanning: _6 = MEM[(int (*) () *)_4 + 48B];
+    Indirect ref read is not const
+  scanning: _7 = (int) __c_13(D);
+  scanning: _15 = OBJ_TYPE_REF(_6;(const struct ctype)this_11(D)->6) (this_11(D), _7);
+    can throw externally to lp 0
+  scanning: return _8;
+Function is locally looping.
+Function is locally throwing.
+char_type std::ctype<char>::widen (const struct ctype * const this, char __c)
+{
+  char _1;
+  unsigned char __c.1_2;
+  int _3;
+  int (*) () * _4;
+  int (*) () _6;
+  int _7;
+  char_type _8;
+  char_type _15;
+  char_type _17;
+
+  <bb 2> [local count: 1073741824]:
+  _1 = this_11(D)->_M_widen_ok;
+  if (_1 != 0)
+    goto <bb 3>; [51.12%]
+  else
+    goto <bb 4>; [48.88%]
+
+  <bb 3> [local count: 548896825]:
+  __c.1_2 = (unsigned char) __c_13(D);
+  _3 = (int) __c.1_2;
+  _17 = this_11(D)->_M_widen[_3];
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 524845000]:
+  std::ctype<char>::_M_widen_init (this_11(D));
+  _4 = this_11(D)->D.38127._vptr.facet;
+  _6 = MEM[(int (*) () *)_4 + 48B];
+  _7 = (int) __c_13(D);
+  _15 = OBJ_TYPE_REF(_6;(const struct ctype)this_11(D)->6) (this_11(D), _7);
+
+  <bb 5> [local count: 1073741824]:
+  # _8 = PHI <_17(3), _15(4)>
+  return _8;
+
+}
+
+
+
+;; Function std::ctype<char>::do_widen (_ZNKSt5ctypeIcE8do_widenEc, funcdef_no=1565, decl_uid=38061, cgraph_uid=536, symbol_order=565)
+
+
+
+ local analysis of virtual std::ctype<char>::char_type std::ctype<char>::do_widen(char) const/565
+   scanning: return __c_1(D);
+Function is locally const.
+Function found to be const: std::ctype<char>::do_widen
+Declaration updated to be const: std::ctype<char>::do_widen
+char_type std::ctype<char>::do_widen (const struct ctype * const this, char __c)
+{
+  <bb 2> [local count: 1073741824]:
+  return __c_1(D);
+
+}
+
+
+
+;; Function main (main, funcdef_no=1812, decl_uid=45098, cgraph_uid=546, symbol_order=576) (executed once)
+
+
+
+ local analysis of int main()/576
+   scanning: std::basic_istream<char>::operator>> (&cin, &n);
+    can throw externally to lp 0
+     callee:_ZNSirsERi
+  scanning: std::__ostream_insert<char, std::char_traits<char> > (&cout, "a=", 2);
+    can throw externally to lp 0
+     callee:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+  scanning: _20 = std::basic_ostream<char>::operator<< (&cout, 0);
+    can throw externally to lp 0
+     callee:_ZNSolsEi
+  scanning: std::endl<char, std::char_traits<char> > (_20);
+    can throw externally to lp 0
+     callee:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  scanning: std::__ostream_insert<char, std::char_traits<char> > (&cout, "X=", 2);
+    can throw externally to lp 0
+     callee:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+  scanning: _25 = std::basic_ostream<char>::operator<< (&cout, 10);
+    can throw externally to lp 0
+     callee:_ZNSolsEi
+  scanning: std::endl<char, std::char_traits<char> > (_25);
+    can throw externally to lp 0
+     callee:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  scanning: b_30 = a_7 + b_8;
+  scanning: _32 = std::basic_ostream<char>::operator<< (&cout, b_30);
+    can throw externally to lp 0
+     callee:_ZNSolsEi
+  scanning: std::endl<char, std::char_traits<char> > (_32);
+    can throw externally to lp 0
+     callee:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  scanning: i_35 = i_9 + 1;
+  scanning: n.0_6 = n;
+  scanning: if (n.0_6 > i_9)
+  scanning: n ={v} {CLOBBER};
+  scanning: return 0;
+Function is locally looping.
+Function is locally throwing.
+int main ()
+{
+  struct basic_ostream & D.50052;
+  struct basic_ostream & D.50046;
+  int n;
+  int t;
+  int i;
+  int b;
+  int a;
+  int n.0_6;
+  struct basic_ostream & _20;
+  struct basic_ostream & _25;
+  struct basic_ostream & _32;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  std::__ostream_insert<char, std::char_traits<char> > (&cout, "a=", 2);
+  _20 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::endl<char, std::char_traits<char> > (_20);
+  std::__ostream_insert<char, std::char_traits<char> > (&cout, "X=", 2);
+  _25 = std::basic_ostream<char>::operator<< (&cout, 10);
+  std::endl<char, std::char_traits<char> > (_25);
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630225]:
+  b_30 = a_7 + b_8;
+  _32 = std::basic_ostream<char>::operator<< (&cout, b_30);
+  std::endl<char, std::char_traits<char> > (_32);
+  i_35 = i_9 + 1;
+
+  <bb 4> [local count: 1073741824]:
+  # a_7 = PHI <0(2), b_8(3)>
+  # b_8 = PHI <1(2), b_30(3)>
+  # i_9 = PHI <1(2), i_35(3)>
+  n.0_6 = n;
+  if (n.0_6 > i_9)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+
+
+;; Function std::__check_facet<std::ctype<char> > (_ZSt13__check_facetISt5ctypeIcEERKT_PS3_, funcdef_no=2185, decl_uid=48203, cgraph_uid=919, symbol_order=952)
+
+
+
+ local analysis of const _Facet& std::__check_facet(const _Facet*) [with _Facet = std::ctype<char>]/952
+   scanning: if (__f_1(D) == 0B)
+  scanning: std::__throw_bad_cast ();
+    can throw externally to lp 0
+     callee:_ZSt16__throw_bad_castv
+  scanning: return __f_1(D);
+Function is locally looping.
+Function is locally throwing.
+const struct ctype & std::__check_facet<std::ctype<char> > (const struct ctype * __f)
+{
+  <bb 2> [local count: 1073741824]:
+  if (__f_1(D) == 0B)
+    goto <bb 3>; [0.04%]
+  else
+    goto <bb 4>; [99.96%]
+
+  <bb 3> [local count: 429496]:
+  std::__throw_bad_cast ();
+
+  <bb 4> [local count: 1073312329]:
+  return __f_1(D);
+
+}
+
+
+
+;; Function std::basic_ios<char>::widen (_ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc, funcdef_no=2140, decl_uid=41575, cgraph_uid=874, symbol_order=907)
+
+
+
+ local analysis of std::basic_ios<_CharT, _Traits>::char_type std::basic_ios<_CharT, _Traits>::widen(char) const [with _CharT = char; _Traits = std::char_traits<char>]/907
+   scanning: _1 = this_5(D)->_M_ctype;
+    Indirect ref read is not const
+  scanning: if (_1 == 0B)
+  scanning: std::__throw_bad_cast ();
+    can throw externally to lp 0
+     callee:_ZSt16__throw_bad_castv
+  scanning: _3 = (int) __c_8(D);
+  scanning: _13 = MEM[(const struct ctype *)_1]._M_widen_ok;
+    Indirect ref read is not const
+  scanning: if (_13 != 0)
+  scanning: __c.1_14 = (unsigned char) __c_8(D);
+  scanning: _15 = (int) __c.1_14;
+  scanning: _16 = MEM[(const struct ctype *)_1]._M_widen[_15];
+    Indirect ref read is not const
+  scanning: _18 = std::ctype<char>::_ZNKSt5ctypeIcE5widenEc.part.0 (_1, _3);
+    can throw externally to lp 0
+     callee:_ZNKSt5ctypeIcE5widenEc.part.0
+  scanning: return _19;
+Function is locally looping.
+Function is locally throwing.
+char_type std::basic_ios<char>::widen (const struct basic_ios * const this, char __c)
+{
+  const struct ctype & D.50065;
+  char_type D.50063;
+  char __c;
+  const struct __ctype_type * _1;
+  int _3;
+  char _13;
+  unsigned char __c.1_14;
+  int _15;
+  char _16;
+  char _18;
+  char _19;
+
+  <bb 2> [local count: 1073741824]:
+  _1 = this_5(D)->_M_ctype;
+  if (_1 == 0B)
+    goto <bb 3>; [0.04%]
+  else
+    goto <bb 4>; [99.96%]
+
+  <bb 3> [local count: 429496]:
+  std::__throw_bad_cast ();
+
+  <bb 4> [local count: 1073312329]:
+  _3 = (int) __c_8(D);
+  _13 = MEM[(const struct ctype *)_1]._M_widen_ok;
+  if (_13 != 0)
+    goto <bb 5>; [51.12%]
+  else
+    goto <bb 6>; [48.88%]
+
+  <bb 5> [local count: 548677267]:
+  __c.1_14 = (unsigned char) __c_8(D);
+  _15 = (int) __c.1_14;
+  _16 = MEM[(const struct ctype *)_1]._M_widen[_15];
+  goto <bb 7>; [100.00%]
+
+  <bb 6> [local count: 524635063]:
+  _18 = std::ctype<char>::_ZNKSt5ctypeIcE5widenEc.part.0 (_1, _3);
+
+  <bb 7> [local count: 1073312330]:
+  # _19 = PHI <_16(5), _18(6)>
+  return _19;
+
+}
+
+
+
+;; Function std::endl<char, std::char_traits<char> > (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_, funcdef_no=2060, decl_uid=42529, cgraph_uid=794, symbol_order=827)
+
+Already processed call to:
+main/576 (int main()) @0x7f497c124880
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: _ZSt3cin/1213 (addr) _ZSt4cout/1214 (addr) _ZSt4cout/1214 (addr) _ZSt4cout/1214 (addr) _ZSt4cout/1214 (addr) _ZSt4cout/1214 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body only_called_at_startup executed_once
+  Called by: 
+  Calls: _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_/827 (955630225 (estimated locally),8.09 per call) (can throw external) _ZNSolsEi/1215 (955630225 (estimated locally),8.09 per call) (can throw external) _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_/827 (118111600 (estimated locally),1.00 per call) (can throw external) _ZNSolsEi/1215 (118111600 (estimated locally),1.00 per call) (can throw external) _ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l/1221 (118111600 (estimated locally),1.00 per call) (can throw external) _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_/827 (118111600 (estimated locally),1.00 per call) (can throw external) _ZNSolsEi/1215 (118111600 (estimated locally),1.00 per call) (can throw external) _ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l/1221 (118111600 (estimated locally),1.00 per call) (can throw external) _ZNSirsERi/1212 (118111600 (estimated locally),1.00 per call) (can throw external) 
+Function called in recursive cycle; ignoring
+struct basic_ostream & std::endl<char, std::char_traits<char> > (struct basic_ostream & __os)
+{
+  struct basic_ostream & D.50068;
+  int (*) () * _1;
+  long int _3;
+  sizetype _4;
+  struct basic_ios * _5;
+  int _7;
+  char _12;
+  struct basic_ostream & _14;
+  struct basic_ostream & _18;
+
+  <bb 2> [local count: 1073741824]:
+  _1 = __os_10(D)->_vptr.basic_ostream;
+  _3 = MEM[(long int *)_1 + -24B];
+  _4 = (sizetype) _3;
+  _5 = __os_10(D) + _4;
+  _12 = std::basic_ios<char>::widen (_5, 10);
+  _7 = (int) _12;
+  _14 = std::basic_ostream<char>::put (__os_10(D), _7);
+  _18 = std::basic_ostream<char>::flush (_14);
+  return _18;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2302, decl_uid=49917, cgraph_uid=1036, symbol_order=1211) (executed once)
+
+
+
+ local analysis of (static initializers for ../fib.cpp)/1211
+   scanning: std::ios_base::Init::Init (&__ioinit);
+    can throw externally to lp 0
+     callee:_ZNSt8ios_base4InitC1Ev
+  scanning: __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  scanning: return;
+Function is locally looping.
+void _GLOBAL__sub_I_main ()
+{
+  <bb 2> [local count: 1073741824]:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  return;
+
+}
+
+

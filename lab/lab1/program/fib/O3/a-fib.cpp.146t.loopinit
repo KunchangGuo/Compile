@@ -1,0 +1,140 @@
+
+;; Function main (main, funcdef_no=1812, decl_uid=45098, cgraph_uid=546, symbol_order=576) (executed once)
+
+Created preheader block for loop 1
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 11 4 5 6 7 8 9 10 12
+;;
+;; Loop 1
+;;  header 4, latch 12
+;;  depth 1, outer 0
+;;  nodes: 4 12 10 7 8 9 6
+;; 2 succs { 11 3 }
+;; 3 succs { 1 }
+;; 11 succs { 4 }
+;; 4 succs { 5 6 }
+;; 5 succs { }
+;; 6 succs { 7 8 }
+;; 7 succs { 10 }
+;; 8 succs { 10 9 }
+;; 9 succs { 10 }
+;; 10 succs { 12 3 }
+;; 12 succs { 4 }
+int main ()
+{
+  char_type D.50125;
+  char __c;
+  char_type D.50122;
+  char __c;
+  char_type D.50119;
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  int prephitmp_2;
+  int _3;
+  int _4;
+  struct basic_ostream & _9;
+  struct basic_ostream & _11;
+  struct basic_ostream & _15;
+  int (*) () * _22;
+  long int _23;
+  sizetype _24;
+  struct basic_ios * _25;
+  struct basic_ostream & _28;
+  const struct __ctype_type * _30;
+  int n.0_32;
+  char _33;
+  char _36;
+  int (*) () * _40;
+  int (*) () _41;
+  void * PROF_45;
+  char _47;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  std::__ostream_insert<char, std::char_traits<char> > (&cout, "a=", 2);
+  _9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::endl.isra (_9);
+  std::__ostream_insert<char, std::char_traits<char> > (&cout, "X=", 2);
+  _11 = std::basic_ostream<char>::operator<< (&cout, 10);
+  std::endl.isra (_11);
+  n.0_32 = n;
+  if (n.0_32 > 1)
+    goto <bb 11>; [89.00%]
+  else
+    goto <bb 3>; [11.00%]
+
+  <bb 3> [local count: 117730583]:
+  n ={v} {CLOBBER};
+  return 0;
+
+  <bb 11> [local count: 105119324]:
+
+  <bb 4> [local count: 952547452]:
+  # a_39 = PHI <b_42(12), 0(11)>
+  # b_42 = PHI <b_13(12), 1(11)>
+  # i_46 = PHI <i_16(12), 1(11)>
+  b_13 = a_39 + b_42;
+  _15 = std::basic_ostream<char>::operator<< (&cout, b_13);
+  _22 = _15->_vptr.basic_ostream;
+  _23 = MEM[(long int *)_22 + -24B];
+  _24 = (sizetype) _23;
+  _25 = _15 + _24;
+  _30 = MEM[(const struct __ctype_type * *)_25 + 240B];
+  if (_30 == 0B)
+    goto <bb 5>; [0.04%]
+  else
+    goto <bb 6>; [99.96%]
+
+  <bb 5> [local count: 381018]:
+  std::__throw_bad_cast ();
+
+  <bb 6> [local count: 952166433]:
+  _33 = MEM[(const struct ctype *)_30]._M_widen_ok;
+  if (_33 != 0)
+    goto <bb 7>; [51.12%]
+  else
+    goto <bb 8>; [48.88%]
+
+  <bb 7> [local count: 486747484]:
+  _36 = MEM[(const struct ctype *)_30]._M_widen[10];
+  _4 = (int) _36;
+  goto <bb 10>; [100.00%]
+
+  <bb 8> [local count: 465418949]:
+  std::ctype<char>::_M_widen_init (_30);
+  _40 = MEM[(const struct ctype *)_30].D.38127._vptr.facet;
+  _41 = MEM[(int (*) () *)_40 + 48B];
+  PROF_45 = [obj_type_ref] OBJ_TYPE_REF(_41;(const struct ctype)_30->6);
+  if (PROF_45 == do_widen)
+    goto <bb 10>; [80.00%]
+  else
+    goto <bb 9>; [20.00%]
+
+  <bb 9> [local count: 93083792]:
+  _47 = OBJ_TYPE_REF(_41;(const struct ctype)_30->6) (_30, 10);
+  _3 = (int) _47;
+
+  <bb 10> [local count: 952166435]:
+  # prephitmp_2 = PHI <_4(7), 10(8), _3(9)>
+  _28 = std::basic_ostream<char>::put (_15, prephitmp_2);
+  std::basic_ostream<char>::flush (_28);
+  i_16 = i_46 + 1;
+  n.0_1 = n;
+  if (n.0_1 > i_16)
+    goto <bb 12>; [89.00%]
+  else
+    goto <bb 3>; [11.00%]
+
+  <bb 12> [local count: 847428128]:
+  goto <bb 4>; [100.00%]
+
+}
+
+

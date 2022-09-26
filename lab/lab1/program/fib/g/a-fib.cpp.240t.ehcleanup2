@@ -1,0 +1,101 @@
+
+;; Function main (main, funcdef_no=1731, decl_uid=44210, cgraph_uid=465, symbol_order=495)
+
+Before removal of unreachable regions:
+Eh tree:
+   2 must_not_throw
+   1 cleanup land:{1,<L4>}
+Reachable regions: n_bits = 3, set = {1 }
+Reachable landing pads: n_bits = 2, set = {1 }
+Removing unreachable region 2
+
+
+After removal of unreachable regions:
+Eh tree:
+   1 cleanup land:{1,<L4>}
+
+
+Removing basic block 16
+Removing unreachable region 1
+Merging blocks 2 and 3
+Merging blocks 10 and 11
+Merging blocks 2 and 4
+Merging blocks 2 and 5
+Merging blocks 2 and 6
+Merging blocks 2 and 7
+Merging blocks 2 and 8
+Merging blocks 2 and 9
+Merging blocks 10 and 12
+int main ()
+{
+  struct basic_ostream & D.49135;
+  struct basic_ostream & D.49134;
+  struct basic_ostream & D.49133;
+  struct basic_ostream & D.49132;
+  struct basic_ostream & D.49131;
+  int n;
+  int t;
+  int i;
+  int b;
+  int a;
+  int D.49129;
+  struct basic_ostream & _1;
+  struct basic_ostream & _2;
+  struct basic_ostream & _3;
+  struct basic_ostream & _4;
+  struct basic_ostream & _5;
+  int n.0_6;
+  struct basic_ostream & _18;
+  struct basic_ostream & _20;
+  struct basic_ostream & _23;
+  struct basic_ostream & _25;
+  int _28;
+  struct basic_ostream & _32;
+
+  <bb 2> :
+  a_12 = 0;
+  b_13 = 1;
+  i_14 = 1;
+  std::basic_istream<char>::operator>> (&cin, &n);
+  _18 = std::operator<< <std::char_traits<char> > (&cout, "a=");
+  _1 = _18;
+  _20 = std::basic_ostream<char>::operator<< (_1, a_12);
+  _2 = _20;
+  std::basic_ostream<char>::operator<< (_2, endl);
+  _23 = std::operator<< <std::char_traits<char> > (&cout, "X=");
+  _3 = _23;
+  _25 = std::basic_ostream<char>::operator<< (_3, 10);
+  _4 = _25;
+  std::basic_ostream<char>::operator<< (_4, endl);
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  t_29 = b_8;
+  b_30 = a_7 + b_8;
+  _32 = std::basic_ostream<char>::operator<< (&cout, b_30);
+  _5 = _32;
+  std::basic_ostream<char>::operator<< (_5, endl);
+  a_34 = t_29;
+  i_35 = i_9 + 1;
+
+  <bb 4> :
+  # a_7 = PHI <a_12(2), a_34(3)>
+  # b_8 = PHI <b_13(2), b_30(3)>
+  # i_9 = PHI <i_14(2), i_35(3)>
+  n.0_6 = n;
+  if (i_9 < n.0_6)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  n ={v} {CLOBBER};
+  _28 = 0;
+
+  <bb 6> :
+<L3>:
+  return _28;
+
+}
+
+
