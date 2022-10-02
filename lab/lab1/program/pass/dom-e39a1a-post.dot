@@ -1,0 +1,13 @@
+digraph "Dominator tree for 'loop' function" {
+	label="Dominator tree for 'loop' function";
+
+	Node0x7f0760 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  store i32 0, i32* %1, align 4\l  br label %2\l}"];
+	Node0x7f0760 -> Node0x820fb0;
+	Node0x820fb0 [shape=record,label="{%2:\l2:                                                \l  %3 = load i32, i32* %1, align 4\l  %4 = icmp slt i32 %3, 6\l  br i1 %4, label %5, label %25\l}"];
+	Node0x820fb0 -> Node0x821010;
+	Node0x820fb0 -> Node0x8210d0;
+	Node0x821010 [shape=record,label="{%5:\l5:                                                \l  %6 = load i32, i32* %1, align 4\l  %7 = sext i32 %6 to i64\l  %8 = getelementptr inbounds [6 x float], [6 x float]* @a, i64 0, i64 %7\l  %9 = load float, float* %8, align 4\l  %10 = fmul float %9, 3.000000e+00\l  %11 = load i32, i32* %1, align 4\l  %12 = sext i32 %11 to i64\l  %13 = getelementptr inbounds [6 x float], [6 x float]* @a, i64 0, i64 %12\l  store float %10, float* %13, align 4\l  %14 = load i32, i32* %1, align 4\l  %15 = sext i32 %14 to i64\l  %16 = getelementptr inbounds [6 x float], [6 x float]* @a, i64 0, i64 %15\l  %17 = load float, float* %16, align 4\l  %18 = fdiv float %17, 2.000000e+00\l  %19 = load i32, i32* %1, align 4\l  %20 = sext i32 %19 to i64\l  %21 = getelementptr inbounds [6 x float], [6 x float]* @a, i64 0, i64 %20\l  store float %18, float* %21, align 4\l  br label %22\l}"];
+	Node0x821010 -> Node0x821070;
+	Node0x821070 [shape=record,label="{%22:\l22:                                               \l  %23 = load i32, i32* %1, align 4\l  %24 = add nsw i32 %23, 1\l  store i32 %24, i32* %1, align 4\l  br label %2, !llvm.loop !6\l}"];
+	Node0x8210d0 [shape=record,label="{%25:\l25:                                               \l  ret void\l}"];
+}

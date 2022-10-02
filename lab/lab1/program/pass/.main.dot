@@ -1,0 +1,10 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x55d440 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{entry:\l  call void @loop()\l  br i1 false, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d440:s0 -> Node0x55d690;
+	Node0x55d440:s1 -> Node0x55d700;
+	Node0x55d690 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f59c7d70",label="{if.then:                                          \l  store i32 1, i32* @m, align 4\l  br label %if.end\l}"];
+	Node0x55d690 -> Node0x55d700;
+	Node0x55d700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{if.end:                                           \l  ret i32 0\l}"];
+}

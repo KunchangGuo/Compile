@@ -1,0 +1,14 @@
+digraph "CFG for 'loop' function" {
+	label="CFG for 'loop' function";
+
+	Node0x55c5d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{entry:\l  %i.address = alloca i32, align 4\l  store i32 0, i32* %i.address, align 4\l  br label %for.cond\l}"];
+	Node0x55c5d0 -> Node0x55c880;
+	Node0x55c880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{for.cond:                                         \l  %i = load i32, i32* %i.address, align 4\l  %n = load i32, i32* @n, align 4\l  %cmp = icmp slt i32 %i, %n\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55c880:s0 -> Node0x55cab0;
+	Node0x55c880:s1 -> Node0x55cb30;
+	Node0x55cab0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{for.body:                                         \l  %i.conv = sext i32 %i to i64\l  %a.i.p = getelementptr inbounds [6 x float], [6 x float]* @a, i64 0, i64\l... %i.conv\l  %a.i = load float, float* %a.i.p, align 4\l  %mul = fmul float %a.i, 3.000000e+00\l  %div = fdiv float %mul, 2.000000e+00\l  store float %div, float* %a.i.p, align 4\l  br label %for.inc\l}"];
+	Node0x55cab0 -> Node0x55d0c0;
+	Node0x55d0c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{for.inc:                                          \l  %inc = add nsw i32 %i, 1\l  store i32 %inc, i32* %i.address, align 4\l  br label %for.cond\l}"];
+	Node0x55d0c0 -> Node0x55c880;
+	Node0x55cb30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{for.end:                                          \l  ret void\l}"];
+}

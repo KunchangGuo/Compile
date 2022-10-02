@@ -1,0 +1,13 @@
+digraph "CFG for 'fib' function" {
+	label="CFG for 'fib' function";
+
+	Node0x1d18690 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{entry:\l  %cmp = icmp eq i32 %n, 0\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x1d18690:s0 -> Node0x1d18790;
+	Node0x1d18690:s1 -> Node0x1d18800;
+	Node0x1d18790 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b39670",label="{if.then:                                          \l  ret i32 0\l}"];
+	Node0x1d18800 [shape=record,color="#b70d28ff", style=filled, fillcolor="#e36c5570",label="{if.else:                                          \l  %cmp1 = icmp eq i32 %n, 1\l  br i1 %cmp1, label %if.then2, label %if.else3\l|{<s0>T|<s1>F}}"];
+	Node0x1d18800:s0 -> Node0x1d18a40;
+	Node0x1d18800:s1 -> Node0x1d18ac0;
+	Node0x1d18a40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670",label="{if.then2:                                         \l  ret i32 1\l}"];
+	Node0x1d18ac0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670",label="{if.else3:                                         \l  %sub = sub i32 %n, 1\l  %call = call i32 @fib(i32 %sub)\l  %sub4 = sub i32 %n, 2\l  %call5 = call i32 @fib(i32 %sub4)\l  %add = add i32 %call, %call5\l  ret i32 %add\l}"];
+}

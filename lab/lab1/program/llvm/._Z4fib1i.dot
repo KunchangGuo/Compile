@@ -1,0 +1,14 @@
+digraph "CFG for '_Z4fib1i' function" {
+	label="CFG for '_Z4fib1i' function";
+
+	Node0xd795b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%1:\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32 %0, i32* %2, align 4\l  store i32 0, i32* %3, align 4\l  store i32 1, i32* %4, align 4\l  store i32 0, i32* %5, align 4\l  store i32 0, i32* %6, align 4\l  br label %7\l}"];
+	Node0xd795b0 -> Node0xd79f30;
+	Node0xd79f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%7:\l7:                                                \l  %8 = load i32, i32* %6, align 4\l  %9 = load i32, i32* %2, align 4\l  %10 = icmp slt i32 %8, %9\l  br i1 %10, label %11, label %20\l|{<s0>T|<s1>F}}"];
+	Node0xd79f30:s0 -> Node0xd79e00;
+	Node0xd79f30:s1 -> Node0xd7a160;
+	Node0xd79e00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%11:\l11:                                               \l  %12 = load i32, i32* %3, align 4\l  %13 = load i32, i32* %4, align 4\l  %14 = add nsw i32 %12, %13\l  store i32 %14, i32* %5, align 4\l  %15 = load i32, i32* %4, align 4\l  store i32 %15, i32* %3, align 4\l  %16 = load i32, i32* %5, align 4\l  store i32 %16, i32* %4, align 4\l  br label %17\l}"];
+	Node0xd79e00 -> Node0xd7a610;
+	Node0xd7a610 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%17:\l17:                                               \l  %18 = load i32, i32* %6, align 4\l  %19 = add nsw i32 %18, 1\l  store i32 %19, i32* %6, align 4\l  br label %7, !llvm.loop !6\l}"];
+	Node0xd7a610 -> Node0xd79f30;
+	Node0xd7a160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%20:\l20:                                               \l  %21 = load i32, i32* %3, align 4\l  ret i32 %21\l}"];
+}

@@ -1,0 +1,60 @@
+digraph "a-main.cpp.246r.vregs" {
+overlap=false;
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	subgraph cluster_0_1 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 1";
+	labeljust=l;
+	penwidth=2;
+	fn_0_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 18:\ L18:\l\
+|\ \ \ 19:\ NOTE_INSN_BASIC_BLOCK\ 5\l\
+|\ \ \ 21:\ r87:SI=[frame:DI-0xc]\l\
+|\ \ \ 22:\ flags:CCGC=cmp(r87:SI,[frame:DI-0x8])\l\
+|\ \ \ 23:\ pc=\{(flags:CCGC\<0)?L20:pc\}\l\
+}"];
+
+	fn_0_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 20:\ L20:\l\
+|\ \ \ 10:\ NOTE_INSN_BASIC_BLOCK\ 4\l\
+|\ \ \ 11:\ r84:SI=[frame:DI-0x10]\l\
+|\ \ \ 12:\ [frame:DI-0x4]=r84:SI\l\
+|\ \ \ 13:\ r85:SI=[frame:DI-0x14]\l\
+|\ \ \ 14:\ \{[frame:DI-0x10]=[frame:DI-0x10]+r85:SI;clobber\ flags:CC;\}\l\
+|\ \ \ 15:\ r86:SI=[frame:DI-0x4]\l\
+|\ \ \ 16:\ [frame:DI-0x14]=r86:SI\l\
+|\ \ \ 17:\ \{[frame:DI-0xc]=[frame:DI-0xc]+0x1;clobber\ flags:CC;\}\l\
+}"];
+
+	}
+	fn_0_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_0_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_0_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ \ 3:\ NOTE_INSN_BASIC_BLOCK\ 2\l\
+|\ \ \ \ 2:\ NOTE_INSN_FUNCTION_BEG\l\
+|\ \ \ \ 5:\ [frame:DI-0x14]=0\l\
+|\ \ \ \ 6:\ [frame:DI-0x10]=0x1\l\
+|\ \ \ \ 7:\ [frame:DI-0xc]=0x1\l\
+|\ \ \ \ 8:\ pc=L18\l\
+}"];
+
+	fn_0_basic_block_6 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 24:\ NOTE_INSN_BASIC_BLOCK\ 6\l\
+|\ \ \ 25:\ r82:SI=0\l\
+|\ \ \ 28:\ r83:SI=r82:SI\l\
+|\ \ \ 32:\ ax:SI=r83:SI\l\
+|\ \ \ 33:\ use\ ax:SI\l\
+}"];
+
+	fn_0_basic_block_0:s -> fn_0_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_2:s -> fn_0_basic_block_5:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_0_basic_block_4:s -> fn_0_basic_block_5:n [style="dotted,bold",color=blue,weight=10,constraint=false];
+	fn_0_basic_block_5:s -> fn_0_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_0_basic_block_5:s -> fn_0_basic_block_6:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_6:s -> fn_0_basic_block_1:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_0_basic_block_0:s -> fn_0_basic_block_1:n [style="invis",constraint=true];
+}
+}

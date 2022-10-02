@@ -1,0 +1,14 @@
+digraph "CFG for 'print' function" {
+	label="CFG for 'print' function";
+
+	Node0xdd7a80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{entry:\l  %i.address = alloca i32, align 4\l  store i32 0, i32* %i.address, align 4\l  br label %for.cond\l}"];
+	Node0xdd7a80 -> Node0xdd7d00;
+	Node0xdd7d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{for.cond:                                         \l  %i = load i32, i32* %i.address, align 4\l  %cmp = icmp slt i32 %i, 6\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0xdd7d00:s0 -> Node0xdd7f30;
+	Node0xdd7d00:s1 -> Node0xdd7fb0;
+	Node0xdd7f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{for.body:                                         \l  %0 = sext i32 %i to i64\l  %arrayidx = getelementptr inbounds [6 x float], [6 x float]* @a, i64 0, i64\l... %0\l  %1 = load float, float* %arrayidx, align 4\l  %2 = fpext float %1 to double\l  %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4\l... x i8]* @.str, i64 0, i64 0), double %2)\l  br label %for.inc\l}"];
+	Node0xdd7f30 -> Node0xdd87f0;
+	Node0xdd87f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{for.inc:                                          \l  %3 = load i32, i32* %i.address, align 4\l  %inc = add nsw i32 %3, 1\l  store i32 %inc, i32* %i.address, align 4\l  br label %for.cond\l}"];
+	Node0xdd87f0 -> Node0xdd7d00;
+	Node0xdd7fb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{for.end:                                          \l  ret void\l}"];
+}
