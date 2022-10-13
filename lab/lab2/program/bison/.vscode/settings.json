@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ll": "llvm",
+        "fb1-5.tab.h": "c",
+        "stdio.h": "c"
+    }
+}
